@@ -46,13 +46,15 @@ Anyway, since I am not actively debugging TLS traffic I decided to unset it.
 
 AND GOOD HEAVENS IT WORKED. 
 
-
-#TLS key logging matters
+# TLS key logging matters
 TLS key logging is used to decrypt HTTPS traffic in tools like Wireshark for debugging or analysis.
 
-#Pointing at a directory is a no no
+
+
+# Pointing at a directory is a no no
 When we attempt to open the path as a file for writing we receive a permission denied or access error since directories can't be opened like files. 
 
-#Your enviromental variables will propagate
+
+# Your enviromental variables will propagate
 When we have an enviromental variable set in Windows user it can affect all child processes, hence why pip/python was impacted in this case.
 
