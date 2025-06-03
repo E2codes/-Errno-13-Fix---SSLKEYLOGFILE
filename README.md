@@ -7,9 +7,8 @@ I was running into an issue with pip install, the output giving me:
 ![13](https://github.com/user-attachments/assets/207e4daf-d501-4788-be9e-f5413e48aa6b)
 
 
-Initally, I focused on the fact that it was a permissions error and therefore tried the following:
-
--Ran pycharm as administrator 
+Initally, I focused on the fact that it was a permissions error and therefore tried the following:  
+-Ran pycharm as administrator  
 -Checked which python and pip where being used, (incase my path was incorrect or I was on a global interpreter.)
 
 
