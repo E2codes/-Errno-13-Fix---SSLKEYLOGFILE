@@ -2,21 +2,28 @@
 
 I was running into an issue with pip install, the output giving me <span style="color:red;">PermissionError: [Errno 13] Permission denied: 'C:\\Users\\</span>
 
+
 ![13](https://github.com/user-attachments/assets/207e4daf-d501-4788-be9e-f5413e48aa6b)
+
 
 Initally I focused on the fact that it was a permissions error and therefore tried the following:
 -Ran pycharm as administrator 
 -Checked which python and pip where being used, (incase my path was incorrect or I was on a global interpreter.)
 
+
 ![get](https://github.com/user-attachments/assets/62eab7bb-a412-4c7a-9fc4-05cef92882bc)
 All good here.
+
 
 While I was working on this project there was a pop up alert stating that the antivirus might be interfearing with some features.
 So with that in mind, and the consideration of maybe a previous install or file was corrupted???? Went ahead and ran:
 
+
   pip cache purge
 
+
 ![cache](https://github.com/user-attachments/assets/349be981-0a17-4de9-a22b-751556a2b717)
+
 
 And tried to install again, with no success. 
 
@@ -25,6 +32,7 @@ And tried to install again, with no success.
 Upon returning I widened my pigeonholed view of the issue and looked into the <span style="color:red;">context.keylog_filename = sslkeylogfile</span>
 
 From what I was gathering it started to look like this was a enviroment variable issue. And what I hypothesis is that this happened when I was working with Wireshark. Either I manually, or an extension I was using, set the SSLKEYLOGFILE path to a directory instead of a file path. WHICH IS BAD. Since this should be pointing at a file. 
+
 
 #All my other programs inherited this and everything broke.
 
